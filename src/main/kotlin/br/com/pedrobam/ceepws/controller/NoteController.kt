@@ -21,4 +21,20 @@ class NoteController {
     fun add(@RequestBody note: Note): Note {
         return noteRepository.save(note)
     }
+
+    @PutMapping("{id}")
+    fun alter(@PathVariable id: Long, @RequestBody note: Note): Note {
+        if (noteRepository.existsById(id)) {
+            val safeNote = note.copy(id = id)
+            return noteRepository.save(safeNote)
+        }
+        return Note()
+    }
+
+    @DeleteMapping("{id}")
+    fun delete(@PathVariable id: Long) {
+        if (noteRepository.existsById(id)) {
+            noteRepository.deleteById(id)
+        }
+    }
 }
