@@ -1,4 +1,4 @@
-package br.com.pedrobam.ceepws.model
+package br.com.pedrobam.ceepws.note
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import javax.persistence.Entity

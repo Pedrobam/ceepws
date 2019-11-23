@@ -1,6 +1,5 @@
-package br.com.pedrobam.ceepws.repositories
+package br.com.pedrobam.ceepws.note
 
-import br.com.pedrobam.ceepws.model.Note
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface NoteRepository : JpaRepository<Note, Long> {
