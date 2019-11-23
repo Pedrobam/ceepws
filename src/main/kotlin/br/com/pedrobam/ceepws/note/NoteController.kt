@@ -30,6 +30,6 @@ class NoteController {
     @DeleteMapping("{id}")
     fun delete(@PathVariable id: Long): ResponseEntity<String> {
         noteService.delete(id)
-        return ResponseEntity("Product is deleted successsfully", HttpStatus.OK)
+        return ResponseEntity("Note is deleted successsfully", HttpStatus.OK)
     }
 }
