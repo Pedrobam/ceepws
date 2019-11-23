@@ -19,7 +19,7 @@ class NoteController {
 
     @PostMapping
     fun add(@RequestBody note: Note): ResponseEntity<Note> {
-        return ResponseEntity(noteService.add(note), HttpStatus.OK)
+        return ResponseEntity(noteService.add(note), HttpStatus.CREATED)
     }
 
     @PutMapping("{id}")
