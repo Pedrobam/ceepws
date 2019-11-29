@@ -1,8 +1,10 @@
 package br.com.pedrobam.ceepws.note
 
+import org.springframework.data.domain.Pageable
+
 interface NoteService {
 
-    fun list(): List<Note>
+    fun list(title: String?, pageable: Pageable): List<Note>
 
     fun add(note: Note): Note
 
