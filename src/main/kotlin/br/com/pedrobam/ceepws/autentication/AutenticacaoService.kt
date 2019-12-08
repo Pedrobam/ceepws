@@ -1,4 +1,4 @@
-package br.com.pedrobam.ceepws.config.security
+package br.com.pedrobam.ceepws.autentication
 
 import br.com.pedrobam.ceepws.usuario.UsuarioRepository
 import org.springframework.beans.factory.annotation.Autowired
