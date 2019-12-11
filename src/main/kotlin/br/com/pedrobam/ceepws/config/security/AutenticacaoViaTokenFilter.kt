@@ -29,8 +29,7 @@ class AutenticacaoViaTokenFilter(
     private fun autenticarCliente(token: String) {
         val idUsuario = tokenService.getIdUsuario(token)
         val usuario = usuarioRepository.findById(idUsuario).get()
-        val authentication = UsernamePasswordAuthenticationToken(usuario, null, usuario.authorities)
-        SecurityContextHolder.getContext().authentication = authentication
+        SecurityContextHolder.getContext().authentication = UsernamePasswordAuthenticationToken(usuario, null, usuario.authorities)
     }
 
     private fun recuperarToken(request: HttpServletRequest): String? {
